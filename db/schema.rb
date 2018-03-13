@@ -23,20 +23,20 @@ ActiveRecord::Schema.define(version: 20180313003821) do
   create_table "credits", force: :cascade do |t|
     t.string "name"
     t.decimal "value", precision: 8, scale: 2
-    t.integer "billingCycle_id"
+    t.integer "billing_cycle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["billingCycle_id"], name: "index_credits_on_billingCycle_id"
+    t.index ["billing_cycle_id"], name: "index_credits_on_billing_cycle_id"
   end
 
   create_table "debts", force: :cascade do |t|
     t.string "name"
     t.decimal "value", precision: 8, scale: 2
-    t.integer "billingCycle_id"
+    t.integer "billing_cycle_id"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["billingCycle_id"], name: "index_debts_on_billingCycle_id"
+    t.index ["billing_cycle_id"], name: "index_debts_on_billing_cycle_id"
   end
 
 end
